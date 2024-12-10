@@ -42,11 +42,11 @@ function Factorielle(n) {
 const readlineInterface = require("readline");
 // create a communication between terminal use createInterface
 const r1 = readlineInterface.createInterface({
-    input: stdin,
-    output: stdout
+    input: process.stdin,
+    output: process.stdout
 });
-
-
-
+r1.question("Enterz Votre Choix: ", function(choix) {
+    console.log(choix);
+});
 
 
