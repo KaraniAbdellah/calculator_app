@@ -36,7 +36,16 @@ function Factorielle(n) {
     }
     return resultat;
 }
-  
+
+
+// Import readlines modulo
+const readlineInterface = require("readline");
+// create a communication between terminal use createInterface
+const r1 = readlineInterface.createInterface({
+    input: stdin,
+    output: stdout
+});
+
 
 
 

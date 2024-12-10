@@ -18,8 +18,8 @@
 
 const readline = require('readline');
 const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
+    input: stdin,
+    output: stdout
 });
   
 /*
@@ -28,17 +28,27 @@ const rl = readline.createInterface({
         & it can imports modules
 
     - readlines
-        is modulo that provide
-        functionallity to deal with console
+        - is built-in modulo that provide
+            functionallity to deal with console
+        - it is take to object (input, output)
     
-    - createInterface()
-        creates a readline interface in Node.js
-    
-    - input: process.stdin
-        for reading from the file
+    - Modulo
+        is like file that contain a lot of function    
 
-    - output: process.stdout
-        for wrtting the values for the terminal
+    - createInterface()
+        - creates a readline interface in Node.js
+        - it return an object
+    
+    - input: stdin output: stdout, 
+        two objects one for handle the user input & other for output user
+        the two object accept two proprities
+
+    - Summary
+        readline.createInterface() creates a communication channel
+            between your program and the terminal.
+        input: stdin uses the standard input stream
+        output: stdout uses the standard output stream
+
 */
 
 
