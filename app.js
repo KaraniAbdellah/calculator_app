@@ -23,7 +23,7 @@ function Multiplication(a, b) {
 
 function Division(a, b) {
     if (b == 0) {
-        console.log(red,"Division par zero!!!", reset);
+        return -1;
     } else return a / b;
 }
 
@@ -57,7 +57,6 @@ function Menu() {
     console.log("7. Factorielle");
     console.log("8. Quitter");
 }
-
 
 
 function Calculator() {
@@ -95,10 +94,17 @@ function Calculator() {
         case 4: {
             let n1 = prompt("Enterz Premier nomber: ");
             let n2 = prompt("Enterz Deuxieme nomber: ");
-            console.log(green, "------------------------------");
-            console.log("Resultat = ", 
-                String(Division(Number(n1), Number(n2))));
-            console.log("------------------------------", reset);
+            let re = Division(Number(n1), Number(n2));
+            if (re == -1) {
+                console.log(red, "------------------------------");
+                console.log("Division par zero!!!");
+                console.log("------------------------------", reset);
+            } else {
+                console.log(green, "------------------------------");
+                console.log("Resultat = ", 
+                    String(Division(Number(n1), Number(n2))));
+                    console.log("------------------------------", reset);
+            }
             break;
         }
         case 5: {
