@@ -1,4 +1,0 @@
-// understnd deapth the readlines
-// make essentiel functions
-// push it in github
-
