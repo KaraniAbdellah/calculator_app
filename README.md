@@ -29,4 +29,3 @@ This project is a simple calculator built with Node.js. It uses basic JavaScript
 ## Requirements
 - Node.js
 - npm (Node Package Manager)
-
