@@ -1,6 +1,6 @@
 # Simple Calculator in Node.js
 
-This project is a simple calculator built with Node.js. It uses basic JavaScript.
+This project is a simple calculator built with Node.js. It uses basic JavaScript concepts.
 
 ## Features
 - Perform math operations:
