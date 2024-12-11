@@ -14,6 +14,9 @@
         like github: contain a lot of package
         npm: contain a lot of packages like "prompt-sync"
 
+        problem: in install any package use -g
+        -g: make ths modulo used in all folders in project
+
         Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force
             change the PowerShell policy to run any script
         PowerShell: blocks some scripts to protect the computer
