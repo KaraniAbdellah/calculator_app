@@ -97,7 +97,7 @@ function Calculator() {
             let re = Division(Number(n1), Number(n2));
             if (re == -1) {
                 console.log(red, "------------------------------");
-                console.log("Division par zero!!!");
+                console.log("⚠️ Division par zero!!!");
                 console.log("------------------------------", reset);
             } else {
                 console.log(green, "------------------------------");
@@ -134,19 +134,17 @@ function Calculator() {
         }
         case 8: {
             console.log(blue, "------------------------------");
-            console.log("Merci Pour Votre Utlisation!!!", );
+            console.log("✅ Merci Pour Votre Utlisation!!!", );
             console.log("------------------------------", reset);
-            
-            return; // break the function execution
+            return; // break the app execution
         }
         default: {
             console.log(red,"------------------------------");
-            console.log("Le Nombre Invalide!!!");
+            console.log("⚠️ Le Nombre Invalide!!!");
             console.log("------------------------------", reset);
         }
     }
     Calculator();
-    
 }
 Calculator();
 
