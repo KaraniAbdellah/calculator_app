@@ -8,86 +8,90 @@ const green = '\x1b[32m';
 const yellow = '\x1b[33m';
 const blue = "\x1b[34m";
 
-
-function Addition(a, b) {
-    return a + b;
-}
-
-function Soustraction(a, b) {
-    return a - b;
-}
-
-function Multiplication(a, b) {
-    return a * b;
-}
-
-function Division(a, b) {
-    if (b == 0) {
-        return -1;
-    } else return a / b;
-}
-
-function Puissance(a, b) {
-    return a ** b;
-}
-
-function Racine_carree(a) {
-    return Math.sqrt(a);
-}
-
-function Factorielle(n) {
-    if (n < 0) {
-      return 'La factorielle n\'est pas \
-        définie pour les nombres négatifs.';
+class Calculator {
+    Addition() {
+        return this.n1 + this.n2;
     }
-    let resultat = 1;
-    for (let i = 1; i <= n; i++) {
-      resultat *= i;
+
+    Soustraction(a, b) {
+        return a - b;
     }
-    return resultat;
+
+    Multiplication(a, b) {
+        return a * b;
+    }
+
+    Division(a, b) {
+        if (b == 0) {
+            return -1;
+        } else return a / b;
+    }
+
+    Puissance(a, b) {
+        return a ** b;
+    }
+
+    Racine_carree(a) {
+        return Math.sqrt(a);
+    }
+
+    Factorielle(n) {
+        if (n < 0) {
+        return 'La factorielle n\'est pas \
+            définie pour les nombres négatifs.';
+        }
+        let resultat = 1;
+        for (let i = 1; i <= n; i++) {
+        resultat *= i;
+        }
+        return resultat;
+    }
+
+    static Menu() {
+        console.log("➕ 1. Addition");
+        console.log("➖ 2. Soustraction");
+        console.log("✖️ 3. Multiplication");
+        console.log("➗ 4. Division");
+        console.log("💥 5. Puissance");
+        console.log("🌱 6. Racine carrée");
+        console.log("⭐ 7. Factorielle");
+        console.log("🚪 8. Quitter");
+    }
+
 }
 
-function Menu() {
-    console.log("➕ 1. Addition");
-    console.log("➖ 2. Soustraction");
-    console.log("✖️ 3. Multiplication");
-    console.log("➗ 4. Division");
-    console.log("💥 5. Puissance");
-    console.log("🌱 6. Racine carrée");
-    console.log("⭐ 7. Factorielle");
-    console.log("🚪 8. Quitter");
-}
-
-
-function Calculator() {
-    Menu();
-    let choix = prompt("Enterz Votre Choix: ");
-    choix = Number(choix);
+let choix;
+do {
+    Calculator.Menu();
+    choix = Number(prompt("Enterz Votre Choix: "));
+    let object_calc = new Calculator();
     switch(choix) {
-        case 1: {
+        case 1:
+        case 2:
+        case 3:
+        case 4: {
             let n1 = prompt("Enterz Premier nomber: ");
             let n2 = prompt("Enterz Deuxieme nomber: ");
             console.log(green, "------------------------------");
-            console.log("Resultat = ", 
-                String(Addition(Number(n1), Number(n2))));
+            if (choix == 1) {
+                console.log("Resultat = ",
+                    String(object_calc.Addition(Number(n1), Number(n2))));
+            } else if (choix == 2) {
+                console.log("Resultat = ", 
+                    String(Soustraction(Number(n1), Number(n2))));
+            } else if (choix == 3) {
+                console.log("Resultat = ", 
+                    String(Multiplication(Number(n1), Number(n2))));
+            } else {
+                
+            }
             console.log("------------------------------", reset);
-            break;
-        }
-        case 2: {
-            let n1 = prompt("Enterz Premier nomber: ");
-            let n2 = prompt("Enterz Deuxieme nomber: ");
-            console.log(green,"------------------------------");
-            console.log("Resultat = ", 
-                String(Soustraction(Number(n1), Number(n2))));
-            console.log("------------------------------", reset);
-            break;
         }
         case 3: {
             let n1 = prompt("Enterz Premier nomber: ");
             let n2 = prompt("Enterz Deuxieme nomber: ");
             console.log(green, "------------------------------");
-            console.log("Resultat = ", 
-                String(Multiplication(Number(n1), Number(n2))));
+            
             console.log("------------------------------", reset);
             break;
         }
@@ -144,9 +148,7 @@ function Calculator() {
             console.log("------------------------------", reset);
         }
     }
-    Calculator();
-}
-Calculator();
 
+} while(choix != 8);
 
 
