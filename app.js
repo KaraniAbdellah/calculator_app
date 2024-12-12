@@ -52,7 +52,7 @@ class Calculator {
         console.log("➖ 2. Soustraction");
         console.log("✖️ 3. Multiplication");
         console.log("➗ 4. Division");
-        console.log("💥 5. Puissance");
+        console.log("💡 5. Puissance");
         console.log("🌱 6. Racine carrée");
         console.log("⭐ 7. Factorielle");
         console.log("🚪 8. Quitter");
