@@ -26,6 +26,15 @@
     "in js you can store function in variable & use variable as function"
 */
 
+// install node js & npm
+/*
+    node js: go to the browser
+    npm: goes comes with node js
+
+    to install packages:
+        npm init
+        npm install package_name
+*/
 
 // try & catch
 /*
