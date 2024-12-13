@@ -1,13 +1,15 @@
+// start working with prompt
 const ps = require("prompt-sync"); // import the prompt-sync module via npm
 const prompt = ps(); // create prompt function
 
-// Color Declaration
+// color Declaration
 const reset = '\x1b[0m';
 const red = '\x1b[31m';
 const green = '\x1b[32m';
 const yellow = '\x1b[33m';
 const blue = "\x1b[34m";
 
+// Class contain the Mathematical functions
 class Calculator {
     Addition(n1, n2) {
         return n1 + n2;
@@ -22,15 +24,9 @@ class Calculator {
     }
 
     Division(a, b) {
-        // if (b == 0) {
-        //     return -1;
-        // } else return a / b;
-        try {
-            return a / b;
-        } catch(error) {
-            console.log(error);
-            return new Error("division par zero");
-        }
+        if (b == 0) {
+            return -1;
+        } else return a / b;
     }
 
     Puissance(a, b) {
@@ -90,7 +86,7 @@ do {
                     String(object_calc.Multiplication(Number(n1), Number(n2))));
             } else {
                 let re = object_calc.Division(Number(n1), Number(n2));
-                if (re) {
+                if (re == -1) {
                     console.log(red, "⚠️ Division par zero!!!", green);
                 } else {
                     console.log("Resultat = ", String(re));

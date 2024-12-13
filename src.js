@@ -31,8 +31,13 @@
 /*
     The try block execute first
     if execution paused --> catch execute  
+    "you can catch division by zero --> will be return infinity"
 
-    you can catch division by zero --> will be return infinity
+    Always use a try-catch block when working with 
+    potentially error-prone code, such as:
+    - Network requests
+    - JSON parsing
+    - Database operations
 */
 try {
     let operation = 10 / 0;
