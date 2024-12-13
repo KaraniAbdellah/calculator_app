@@ -50,6 +50,6 @@ class Calculator {
     }
 }
 
-// Exporting Calculator as attaching 
-// it to the module object
+// Exporting Calculator 
 module.exports = Calculator;
+
