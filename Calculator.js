@@ -1,6 +1,6 @@
 // Class contain the Mathematical functions
 class Calculator {
-    Addition(n1, n2) {
+    Adwdition(n1, n2) {
         return n1 + n2;
     }
     Soustraction(a, b) {
