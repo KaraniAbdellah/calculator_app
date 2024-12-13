@@ -27,3 +27,18 @@
 */
 
 
+// try & catch
+/*
+    The try block execute first
+    if execution paused --> catch execute  
+
+    you can catch division by zero --> will be return infinity
+*/
+try {
+    let operation = 10 / 0;
+    console.log(`the result is ${operation}`);
+} catch (error) {
+    console.error("Error: ", error.message);
+}
+
+

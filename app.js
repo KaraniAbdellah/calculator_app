@@ -22,9 +22,15 @@ class Calculator {
     }
 
     Division(a, b) {
-        if (b == 0) {
-            return -1;
-        } else return a / b;
+        // if (b == 0) {
+        //     return -1;
+        // } else return a / b;
+        try {
+            return a / b;
+        } catch(error) {
+            console.log(error);
+            return new Error("division par zero");
+        }
     }
 
     Puissance(a, b) {
@@ -84,7 +90,7 @@ do {
                     String(object_calc.Multiplication(Number(n1), Number(n2))));
             } else {
                 let re = object_calc.Division(Number(n1), Number(n2));
-                if (re == -1) {
+                if (re) {
                     console.log(red, "⚠️ Division par zero!!!", green);
                 } else {
                     console.log("Resultat = ", String(re));
