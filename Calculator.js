@@ -48,5 +48,8 @@ class Calculator {
         console.log("⭐ 7. Factorielle");
         console.log("🚪 8. Quitter");
     }
-
 }
+
+// Exporting Calculator as attaching 
+// it to the module object
+module.exports = Calculator;

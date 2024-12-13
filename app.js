@@ -2,6 +2,11 @@
 const ps = require("../calculator_app/src/node_modules/prompt-sync"); // import the prompt-sync module via npm
 const prompt = ps(); // create prompt function
 
+
+// import the class
+const Calculator = require("./Calculator");
+
+
 // color Declaration
 const reset = '\x1b[0m';
 const red = '\x1b[31m';

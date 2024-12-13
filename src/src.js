@@ -1,3 +1,14 @@
+// install node js & npm
+/*
+    node js: go to the browser
+    npm: goes comes with node js
+
+    to install packages:
+        npm init
+        npm install package_name
+*/
+
+
 // NodeJs & npm & require
 /*
     require:
@@ -26,15 +37,21 @@
     "in js you can store function in variable & use variable as function"
 */
 
-// install node js & npm
-/*
-    node js: go to the browser
-    npm: goes comes with node js
 
-    to install packages:
-        npm init
-        npm install package_name
+// Export a Class in NodeJs
+/*
+    in app.js
+        const Calculator = require("./Calculator");
+        Calculator.Menu();
+    
+    module.exports = Calculator;
+        is a module in node js that allow you to export data,
+        classes, functions, you can use it in another using require()
+    
+    const Calculator = require("./Calculator");
+        require Calculator class
 */
+
 
 // try & catch
 /*
@@ -49,10 +66,7 @@
     - Database operations
 */
 try {
-    let operation = 10 / 0;
     console.log(`the result is ${operation}`);
 } catch (error) {
     console.error("Error: ", error.message);
 }
-
-
