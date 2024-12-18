@@ -11,7 +11,6 @@ const Calculator = require("./Calculator");
 const reset = '\x1b[0m';
 const red = '\x1b[31m';
 const green = '\x1b[32m';
-const yellow = '\x1b[33m';
 const blue = "\x1b[34m";
 
 
@@ -26,6 +25,7 @@ do {
             case 2:
             case 3:
             case 4: 
+            case 8:
                 let n1 = prompt("Enterz Premier nomber: ");
                 let n2 = prompt("Enterz Deuxieme nomber: ");
                 console.log(green, "------------------------------");
@@ -38,7 +38,12 @@ do {
                 } else if (choix == 3) {
                     console.log("Resultat = ", 
                         String(object_calc.Multiplication(Number(n1), Number(n2))));
-                } else {
+                } 
+                else if(choix == 8) {
+                    console.log("Resultat = ", 
+                        String(object_calc.Pourcentage(Number(n1), Number(n2))));
+                }
+                else {
                     let re = object_calc.Division(Number(n1), Number(n2));
                     if (re == -1) {
                         console.log(red, "⚠️ Division par zero!!!", green);
@@ -73,9 +78,9 @@ do {
                 console.log("------------------------------", reset);
                 break;
             }
-            case 8: {
+            case 9: {
                 console.log(blue, "------------------------------");
-                console.log("✅ Merci Pour Votre Utlisation!!!", );
+                console.log("✅ Merci Pour Votre Utilisation!!!", );
                 console.log("------------------------------", reset);
                 return; // break the app execution
             }
@@ -89,6 +94,6 @@ do {
         console.log(error);
     }
 
-} while(choix != 8);
+} while(choix != 9);
 
 

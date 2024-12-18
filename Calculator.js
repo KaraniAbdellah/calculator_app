@@ -1,6 +1,6 @@
 // Class contain the Mathematical functions
 class Calculator {
-    Adwdition(n1, n2) {
+    Addition(n1, n2) {
         return n1 + n2;
     }
     Soustraction(a, b) {
@@ -27,7 +27,7 @@ class Calculator {
         }
         let resultat = 1;
         for (let i = 1; i <= n; i++) {
-        resultat *= i;
+            resultat *= i;
         }
         return resultat;
     }
@@ -39,7 +39,11 @@ class Calculator {
         console.log("💡 5. Puissance");
         console.log("🌱 6. Racine carrée");
         console.log("⭐ 7. Factorielle");
-        console.log("🚪 8. Quitter");
+        console.log("⭐ 8. Pourcentage");
+        console.log("🚪 9. Quitter");
+    }
+    Pourcentage(a, b) {
+        return (a * b) / 100;
     }
 }
 
