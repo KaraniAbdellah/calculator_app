@@ -15,6 +15,9 @@ class Calculator {
         } else return a / b;
     }
     Puissance(a, b) {
+        if (a == 0 && b == 0 || b < 0) {
+            return -1;
+        }
         return a ** b;
     }
     Racine_carree(a) {

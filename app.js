@@ -56,9 +56,13 @@ do {
             case 5: {
                 let n1 = prompt("Enterz la base : ");
                 let n2 = prompt("Enterz l'exposant : ");
+                let re = object_calc.Puissance(Number(n1), Number(n2));
                 console.log(green, "------------------------------");
-                console.log("Resultat = ", 
-                    String(object_calc.Puissance(Number(n1), Number(n2))));
+                if (re == -1) {
+                    console.log(red, "⚠️ Forme Indéterminée !!!", green);
+                } else {
+                    console.log("Resultat = ", String(re));
+                } 
                 console.log("------------------------------", reset);
                 break;
             }

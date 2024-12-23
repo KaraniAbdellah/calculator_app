@@ -1,3 +1,7 @@
+# images
+<img src = "img/Screenshot 2024-12-23 202222.png">
+<img src = "img/Screenshot 2024-12-23 202300.png">
+
 # Simple Calculator in Node.js 🧮
 
 This project is a simple calculator built with Node.js. It uses basic JavaScript concepts. 🚀
