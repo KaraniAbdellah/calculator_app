@@ -34,4 +34,5 @@ This project is a simple calculator built with Node.js. It uses basic JavaScript
 - Node.js
 - npm (Node Package Manager)
 
-made with love by **abdellah karani**
+
+*❤️ made with love by abdellah karani ❤️*
